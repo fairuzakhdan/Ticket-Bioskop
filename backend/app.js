@@ -13,14 +13,7 @@ const seatsRouter = require("./routes/seatsRoute");
 const bookingsRouter = require("./routes/bookingsRoute");
 const ticketsRouter = require("./routes/ticketsRoute");
 
-app.use(
-  cors({
-    // origin: "http://localhost:5173",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, 
-  })
-);
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(bodyParser.json());
